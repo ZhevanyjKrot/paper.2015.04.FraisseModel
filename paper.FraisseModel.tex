@@ -2,21 +2,21 @@
 \documentclass{article} % ????? ?????????
 \usepackage[utf8]{inputenc}         % ??????? ?????????
 \usepackage[russian]{babel}           % ???????????
-\usepackage{amssymb,amsfonts,amsmath} % ????? AMSLaTeX
+\usepackage{amssymb,amsfonts,amsmath,eucal} % ????? AMSLaTeX
 \usepackage{graphicx}                 % ??????? ???????
 \usepackage{enumerate}                %
-\usepackage{tkz-graph}
+\usepackage{color}
 \usepackage{hyperref}
+\usepackage[colorinlistoftodos]{todonotes} % remove
+
 
 %%%%%%%%%%%%%%%%%%%%% ????????? ???????? %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Ультраоднородные и экзистенциально замкнутые группы в классе абелевых групп}
 \author{А.А. Мищенко, В.Н. Ремесленников, А.В. Трейер.}
-% \date{22 января 2009г.}
 
 \newtheorem{theorem}{Теорема}
-\newtheorem{theorem1}{Теорема}
 \newtheorem{lemma}{Лемма}
 \newtheorem{proposition}{Предложение}
 \newtheorem{statement}{Утверждение}
@@ -24,9 +24,63 @@
 
 \newtheorem{definition}{Определение}
 
+\newcommand{\todoi}[1]{\todo[inline]{#1}}
+\def\proof{{\noindent{\bf Доказательство.}} }
+\def\A{{\mathfrak{A}}}
+\def\K{{\mathcal{K}}}
+\def\U{{\mathcal{U}}}
+\def\P{{\mathcal{P}}}
+\def\F{{\mathcal{F}}}
+\def\S{{\mathcal{S}}}
+\def\L{{\mathcal{L}}}
+\def\C{{\mathcal{C}}}
+\def\Z{{\mathbb{Z}}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
+\def\Th{{\mathrm{Th}}}
+\def\Tha{{\mathrm{Th}_\forall}}
+\def\The{{\mathrm{Th}_\exist}}
+\def\CG{{\mathrm{CGr}}}
+\def\ui{{\mathrm{UI}}}
+\def\HP{\textbf{HP}}
+\def\JEP{\textbf{JEP}}
+\def\AP{\textbf{AP}}
+\def\AAP{\textbf{AAP}}
+
 \begin{document}
 \maketitle
 \tableofcontents
+\listoftodos
+
+
 
 \section{Введение}
+
+\section{Предварительные сведения}
+
+Пусть $\K$ некоторый универсальный класс. Определим некоторые свойства на классе $\K$ согласно книге Ходжеса [???].
+
+\noindent \HP  (\textit{Hereditary property}): Если $A \in \K$ и $B$ кончно порожденная подструктура в $A$, то $B$ изморфна некторой структуре в $\K$. 
+
+\noindent \JEP  (\textit{Join Embeding Property}): Если $A, B \in \K$ тогда существует такая структура $C \in \K$, что $A$ и $B$ вкладываются в $C$.
+
+\noindent \AP  (\textit{Amalgamation Property}): Если $A, B$ и $C$ структуры из $\K$ и $e : A \rightarrow B$ и $f : A \rightarrow C$ -- вложения, тогда существует структура $D \in \K$ и вложения $g : B \rightarrow D$ и $h : C \rightarrow D$ такие, что $ge = hf$. 
+
+Пусть $G$ -- группа, \textit{$p$-высотой} элемента $g \in G$ называется наибольшее число $k$ такое, что в группе $G$ разрешимо уравнение $p^k x = g;$ $p$-высоту элемента $g$ будем обозначать $h_p(g).$ 
+
+Введем новое свойство \AAP{} путем расширения свойства \AP{} следующим образом:
+
+\noindent \AAP (\textit{Admissible Amalgamation Property}): Если $A, B$ и $C$ структуры из $\K$ и $e : A \rightarrow B$ и $f : A \rightarrow C$ -- вложения такие, что для любого элемента $a \in A$ $h_p(e(a)) = h_p(f(a))$. Тогда существует структура $D \in \K$ и вложения $g : B \rightarrow D$ и $h : C \rightarrow D$ такие, что $ge = hf$. 
+
+Рассмотрим универсальный класс $\K$ порождающийся своей периодической частью, то есть $\K = ucl(T(\K))$, где $T(\K) = \{T(A) | \ A \in \K\}$. Пусть $C(\K)$ каноническая группа для класса $\K$. Рассмотрим класс всех конечно порожденных подгрупп группы $C(\K)$, обозначим его $FG(C(\K))$.
+
+\begin{lemma}
+Пусть класс $\K$ порождается своей периодической частью. Тогда для класса $FG(C(\K))$ выполняется свойство \AAP.
+\end{lemma}
+
+\proof
+
+
+
+ 
 \end{document}
